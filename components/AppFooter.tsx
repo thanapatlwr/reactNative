@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 const AppFooter = ():React.JSX.Element => {
-    const hello = "Hello TNI Footer";
+    const hello = "Hello TNI Footerr";
     const hello2 = <Text>Hello JSX</Text>;
     const isLogin = true;
   return (
