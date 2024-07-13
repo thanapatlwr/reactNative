@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 import AppFooter from './components/AppFooter';
 import AppHeader from './components/AppHeader';
+import Header from './Practice3.1/Header';
 
 export default function App():React.JSX.Element {
 
@@ -18,6 +19,9 @@ export default function App():React.JSX.Element {
     <View style={styles.container}>
       <AppHeader title="This is Header" year={2018}/>
       <AppHeader title="This is Header2"/>
+      <Header fullname="Thanapat Larpwaree"/>
+    
+      
       <Text>Hello React Native!</Text>
       { users.map((data,index)=>{
         return(
