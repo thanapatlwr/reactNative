@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         backgroundColor:"white",
         elevation:5,
         marginTop:50,
+        
     },
     profileName:{
         fontSize:20,
