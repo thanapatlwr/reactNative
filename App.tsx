@@ -19,14 +19,14 @@ function App(): React.JSX.Element {
   useEffect(() => {
     console.log(`Fullname has changed to : ${fullname}`);
   }, [fullname]); //This will run whenever 'fullname' changes
-  // const handleButtonClick=()=>{
-  //   Alert.alert("Hello",`Input your fullname : ${fullname}`)
-  // }
+  const handleButtonClick=()=>{
+    Alert.alert("Hello",`Input your fullname : ${fullname}`)
+  }
   return (
     <View style={styles.container}>
       <AppHeader fullname={fullname} message={message} />
-      <Content message={message} fullname={fullname} />
-      {/* <Content message={message} onButtonClick={handleButtonClick}/> */}
+      {/* <Content message={message} fullname={fullname} /> */}
+      <Content message={message} onButtonClick={handleButtonClick}/>
       <AppFooter footerMessage={footerMessage} />
       <TextInput
         style={stylesPractice.input}
