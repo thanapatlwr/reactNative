@@ -6,8 +6,8 @@ import UseEffectExample from './components/UseEffectExample'
 const App = ():React.JSX.Element => {
   return (
     <View>
-      {/* <ProfileScreen/> */}
-      <UseEffectExample/>
+      <ProfileScreen/>
+      {/* <UseEffectExample/> */}
     </View>
   )
 }
