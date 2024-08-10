@@ -25,5 +25,5 @@ const Content = ({ message, onButtonClick }: ContentProps):React.JSX.Element => 
     </View>
   );
 };
-
+//
 export default Content;

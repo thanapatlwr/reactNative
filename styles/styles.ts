@@ -171,5 +171,5 @@ const stylesPractice = StyleSheet.create({
       marginLeft:50
   } 
 }); 
-
+//
 export { styles, stylesProfile, stylesLogin, stylesPractice };

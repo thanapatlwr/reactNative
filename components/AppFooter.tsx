@@ -14,5 +14,5 @@ const AppFooter = ({ footerMessage }:AppFooterProps):React.JSX.Element => {
   );
 };
 
-
+//
 export default AppFooter;

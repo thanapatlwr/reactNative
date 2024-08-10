@@ -8,7 +8,6 @@ const App = ():React.JSX.Element => {
   return (
     <View>
       <ProfileScreen/>
-      {/* <UseEffectExampl/> */}
     </View>
   )
 }
