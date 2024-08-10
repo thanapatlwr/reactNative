@@ -10,9 +10,9 @@ import NewsApp from './components/NewsApp'
 const App = ():React.JSX.Element => {
   return (
     <View>
-      <FlastListExample/>
-      <FlatListcallBackend/>
-      
+      {/* <FlastListExample/> */}
+      {/* <FlatListcallBackend/> */}
+      <NewsApp/>
       
 
     </View>
