@@ -5,6 +5,8 @@ import UseEffectExampl from './components/UseEffectExample'
 import FlastListExample from './components/FlastListExample'
 import FlatListcallBackend from './components/FlatListcallBackend'
 import NewsApp from './components/NewsApp'
+import WeatherLondon from './WeatherLondon'
+import WeatherBangkok from './WeatherBangkok'
 
 
 const App = ():React.JSX.Element => {
@@ -12,7 +14,9 @@ const App = ():React.JSX.Element => {
     <View>
       {/* <FlastListExample/> */}
       {/* <FlatListcallBackend/> */}
-      <NewsApp/>
+      {/* <NewsApp/> */}
+      {/* <WeatherLondon/> */}
+      <WeatherBangkok/>
       
 
     </View>
