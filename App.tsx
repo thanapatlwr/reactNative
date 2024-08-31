@@ -7,6 +7,8 @@ import FlatListcallBackend from './components/FlatListcallBackend'
 import NewsApp from './components/NewsApp'
 import WeatherLondon from './WeatherLondon'
 import WeatherBangkok from './WeatherBangkok'
+import ModelExample from './ModelExample'
+import WeatherApp from './WeatherApp'
 
 
 const App = ():React.JSX.Element => {
@@ -16,7 +18,9 @@ const App = ():React.JSX.Element => {
       {/* <FlatListcallBackend/> */}
       {/* <NewsApp/> */}
       {/* <WeatherLondon/> */}
-      <WeatherBangkok/>
+      {/* <WeatherBangkok/> */}
+      {/* <ModelExample/> */}
+      <WeatherApp/>
       
 
     </View>
