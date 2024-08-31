@@ -37,7 +37,7 @@ const WeatherBangkok = (): React.JSX.Element => {
 
   const fetchWeatherData = async () => {
     const API_KEY = 'd78aaab2d84844433d115114fb3bb62e';
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=Bangkok&appid=${API_KEY}&units=metric&lang=th`;;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=Bangkok&appid=${API_KEY}&units=metric&lang=th`;
     try {
       const response = await axios.get(URL);
       setState({
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    backgroundColor: "#afc0f7",
+    backgroundColor: "#f5f5f5",
     marginTop: 50,
   },
   centeredContainer: {
@@ -118,7 +118,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   errorText: {
-    fontSize: 18,
     color: "red",
   },
   cityName: {
