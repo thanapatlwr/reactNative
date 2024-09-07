@@ -1,19 +1,30 @@
+import 'react-native-gesture-handler'
 import { View, Text } from 'react-native'
 import React from 'react'
+import {HeaderButtonsProvider} from 'react-navigation-header-buttons';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 import HomeScreen from './screens/HomeScreen'
 import AboutScreen from './screens/AboutScreen'
+import MenuScreen from './screens/MenuScreen';
+import ProductScreen from './screens/ProductScreen';
+
 import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import CreatePostScreen from './screens/CreatePostScreen';
+import {createDrawerNavigator} from '@react-navigation/drawer'
 
-const App = () => {
-  const HomeStack = createNativeStackNavigator();
-  return (
-    <NavigationContainer>
+const HomeStack = createNativeStackNavigator();
+const ProductStack = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
+
+function HomeStackScreen(){
+  return(
+    <SafeAreaProvider>
       <HomeStack.Navigator 
       initialRouteName='Home'
       screenOptions={{
-        headerStyle:{backgroundColor:'#6388ff'},
+        headerStyle:{backgroundColor:'#ffffff'},
         headerTintColor:'white',
         headerTitleStyle:{fontWeight:'bold'},
       }}
@@ -38,7 +49,39 @@ const App = () => {
         />
         <HomeStack.Screen name='CreatePost' component={CreatePostScreen}/>
       </HomeStack.Navigator>
-    </NavigationContainer>
+    </SafeAreaProvider>
+  )
+}
+function ProductStackScreen(){
+  return(
+      <ProductStack.Navigator 
+      initialRouteName='Home'
+      screenOptions={{
+        headerTitleStyle:{fontWeight:'bold'},
+      }}
+      >
+        <ProductStack.Screen
+          name='Product'
+          component={ProductScreen}
+        />
+      </ProductStack.Navigator>
+  )
+}
+const App = () => {
+  return (
+    <SafeAreaProvider>
+      <HeaderButtonsProvider stackType='native'>
+      <NavigationContainer>
+        <Drawer.Navigator
+          screenOptions={{headerShown:false}}
+          drawerContent={props => <MenuScreen{...props}/>}
+        >
+          <Drawer.Screen name='HomeStack' component={HomeStackScreen}/>
+          <Drawer.Screen name='ProductStack' component={ProductStackScreen}/>
+        </Drawer.Navigator>
+      </NavigationContainer>
+    </HeaderButtonsProvider>
+    </SafeAreaProvider>
   
   )
 }
